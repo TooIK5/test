@@ -1,0 +1,16 @@
+p {
+  color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+span {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  span {
+    font-size: 10px;
+  }
+}

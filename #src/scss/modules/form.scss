@@ -1,0 +1,12 @@
+
+p {
+    color: green;
+    display: flex;
+}
+
+span {
+    font-size: 20px;
+    @media (max-width: 767px) {
+        font-size: 10px;
+    }
+}
