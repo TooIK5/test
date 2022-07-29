@@ -1,12 +1,203 @@
+@import "../fonts.scss";
 
-p {
-    color: green;
+//left block
+
+.singUp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 665px;
+    height: 480px;
     display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
 }
 
-span {
-    font-size: 20px;
-    @media (max-width: 767px) {
-        font-size: 10px;
+.singUpText {
+    min-width: 137.2px;
+    background: #5A61ED;
+}
+
+.singUpText__heading {
+        font-family: 'PTS55F';
+        margin: 296px 0 0 68.5px;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 49px;
+        line-height: 63px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+}
+
+//form block 
+.singUpForm {
+    position: relative;
+    padding: 39px 22.5px 0 20.8px;
+    width: 100%;
+}
+
+.formUpperText {
+    p {
+        font-family: "WorkSans-Medium";
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -0.6px;
     }
+
+    span {
+        font-family: 'WorkSans-Light';
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.15px;
+    }
+}
+
+.control {
+    select, input[type="text"], input[type="email"]  {
+        font-family: "WorkSans-Medium";
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+input[type="radio"]{
+    vertical-align: bottom;
+    margin: 0 0 0 -1px;
+  }
+
+.singUpForm--fieldWidth {
+    width: 234.5px;
+    padding-bottom: 6.1px;
+
+    }
+
+.fieldLable {
+    padding-bottom: 4px;
+    font-family: 'WorkSans-Light';
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+}
+
+.fieldSet__lable {
+    padding-bottom: 5.3px;
+    font-family: 'WorkSans-Light';
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+}
+
+.fields {
+    display: grid; 
+    gap: 0px 0px; 
+    justify-content: space-between;
+    width: 100%;
+    align-items: start; 
+    margin-top: 17px;
+    grid-template-areas: 
+      "a b"
+      "c d"
+      "f g"
+      "e v"
+      "n  h"; 
+
+    input, select {
+        &:focus {
+            outline: none; 
+        }
+        border: 0;
+        border-bottom: .7px solid #F2F2F2;
+    }
+}
+
+  .a { grid-area: a; }
+  .c { grid-area: c; }
+  .d { grid-area: d; }
+  .f { grid-area: f; }
+  .g { grid-area: g; }
+  .e { grid-area: e; }
+  .b { grid-area: b; }
+  .v { grid-area: v; }
+  .h { grid-area: h; }
+  .n { grid-area: n; }
+
+.control {
+    padding-bottom: 16.18px;
+ 
+    .fieldSet {
+        width: 234.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+        &:nth-child(2) {
+            border: 1px solid red;
+        }
+     }
+}
+
+.fieldSet__day {
+  min-width: 56px;
+  padding-bottom: 6.1px;
+}
+
+.fieldSet__month {
+    margin: 0 9.8px 0 9.8px;
+    min-width: 91px;
+    padding-bottom: 6.1px;
+}
+
+.fieldSet__year {
+   min-width: 67.67px;
+   padding-bottom: 6.1px;
+}
+
+ select {
+    appearance: none; 
+    background: url("../../img/triangle.svg") no-repeat right center;
+}
+
+ .genderControl {
+    font-family: "WorkSans-Medium";
+    font-size: 14px;
+    line-height: 16px;
+    div + div {
+        margin-left: 15.7px;
+    }
+  div {
+    display: inline-block;
+  }
+ }
+
+.singUpForm__submitBtn {
+    font-family: "PTS55F";
+    color: #FFFFFF;
+    background: #5A61ED;
+    border: 0.5px solid #FFFFFF;
+    height: 32px;
+    width: 154px;
+    font-size: 14px;
+    line-height: 18px;  
+}
+
+.bottomText {
+    font-family: 'WorkSans-Light';
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 88.12px;
+}
+
+.submit__btn {
+    padding-top: 81.82px;
+    input {
+       float: right;
+    }
+}
+
+
+@media (max-width: 767px) {
+ 
 }

@@ -1,16 +1,356 @@
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body {
+  margin: 0;
+  background: #F2F2F2;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
-  color: green;
+  margin: 0;
+}
+
+input,
+legend {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "PTS55F";
+  font-display: swap;
+  src: url("../fonts/PTS55F.woff") format("woff"), url("../fonts/PTS55F.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTS75F";
+  font-display: swap;
+  src: url("../fonts/PTS75F.woff") format("woff"), url("../fonts/PTS75F.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Bold.woff") format("woff"), url("../fonts/WorkSans-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Medium.woff") format("woff"), url("../fonts/WorkSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Light";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Light.woff") format("woff"), url("../fonts/WorkSans-Light.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.singUp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 665px;
+  height: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #FFFFFF;
 }
 
-span {
-  font-size: 20px;
+.singUpText {
+  min-width: 137.2px;
+  background: #5A61ED;
 }
 
-@media (max-width: 767px) {
-  span {
-    font-size: 10px;
-  }
+.singUpText__heading {
+  font-family: "PTS55F";
+  margin: 296px 0 0 68.5px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+.singUpForm {
+  position: relative;
+  padding: 39px 22.5px 0 20.8px;
+  width: 100%;
+}
+
+.formUpperText p {
+  font-family: "WorkSans-Medium";
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.6px;
+}
+
+.formUpperText span {
+  font-family: "WorkSans-Light";
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+}
+
+.control select,
+.control input[type=text],
+.control input[type=email] {
+  font-family: "WorkSans-Medium";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+input[type=radio] {
+  vertical-align: bottom;
+  margin: 0 0 0 -1px;
+}
+
+.singUpForm--fieldWidth {
+  width: 234.5px;
+  padding-bottom: 6.1px;
+}
+
+.fieldLable {
+  padding-bottom: 4px;
+  font-family: "WorkSans-Light";
+  font-size: 12px;
+  line-height: 14px;
+  color: #7C7C7C;
+}
+
+.fieldSet__lable {
+  padding-bottom: 5.3px;
+  font-family: "WorkSans-Light";
+  font-size: 12px;
+  line-height: 14px;
+  color: #7C7C7C;
+}
+
+.fields {
+  display: grid;
+  gap: 0px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-top: 17px;
+  grid-template-areas: "a b" "c d" "f g" "e v" "n  h";
+}
+
+.fields input,
+.fields select {
+  border: 0;
+  border-bottom: 0.7px solid #F2F2F2;
+}
+
+.fields input:focus,
+.fields select:focus {
+  outline: none;
+}
+
+.a {
+  grid-area: a;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.f {
+  grid-area: f;
+}
+
+.g {
+  grid-area: g;
+}
+
+.e {
+  grid-area: e;
+}
+
+.b {
+  grid-area: b;
+}
+
+.v {
+  grid-area: v;
+}
+
+.h {
+  grid-area: h;
+}
+
+.n {
+  grid-area: n;
+}
+
+.control {
+  padding-bottom: 16.18px;
+}
+
+.control .fieldSet {
+  width: 234.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.control .fieldSet:nth-child(2) {
+  border: 1px solid red;
+}
+
+.fieldSet__day {
+  min-width: 56px;
+  padding-bottom: 6.1px;
+}
+
+.fieldSet__month {
+  margin: 0 9.8px 0 9.8px;
+  min-width: 91px;
+  padding-bottom: 6.1px;
+}
+
+.fieldSet__year {
+  min-width: 67.67px;
+  padding-bottom: 6.1px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../../img/triangle.svg") no-repeat right center;
+}
+
+.genderControl {
+  font-family: "WorkSans-Medium";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.genderControl div + div {
+  margin-left: 15.7px;
+}
+
+.genderControl div {
+  display: inline-block;
+}
+
+.singUpForm__submitBtn {
+  font-family: "PTS55F";
+  color: #FFFFFF;
+  background: #5A61ED;
+  border: 0.5px solid #FFFFFF;
+  height: 32px;
+  width: 154px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.bottomText {
+  font-family: "WorkSans-Light";
+  font-size: 13px;
+  line-height: 15px;
+  padding-top: 88.12px;
+}
+
+.submit__btn {
+  padding-top: 81.82px;
+}
+
+.submit__btn input {
+  float: right;
+}
+
+@font-face {
+  font-family: "PTS55F";
+  font-display: swap;
+  src: url("../fonts/PTS55F.woff") format("woff"), url("../fonts/PTS55F.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTS75F";
+  font-display: swap;
+  src: url("../fonts/PTS75F.woff") format("woff"), url("../fonts/PTS75F.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Bold.woff") format("woff"), url("../fonts/WorkSans-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Medium.woff") format("woff"), url("../fonts/WorkSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Light";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Light.woff") format("woff"), url("../fonts/WorkSans-Light.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
 }

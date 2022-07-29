@@ -1,3 +1,4 @@
+
 let project_folder = require("path").basename(__dirname);
 let source_folder = "#src";
 let fs = require('fs');
@@ -14,19 +15,20 @@ let path = {
         html: source_folder + "/*.html",
         css: source_folder + "/scss/style.scss",
         js: source_folder + "/js/script.js",
-        img: source_folder + "/img/**/*.{jpg, png, svg, ico, webp}",
+        img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
         fonts: source_folder + "/fonts/*.ttf", 
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/*.{jpg, png, svg, ico, webp}",
+        img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
     },
     clean: "./" + project_folder + "/"   
 }
 let { src, dest} = require("gulp"),
     gulp = require('gulp'),
+    del = require("del"),
     scss = require("gulp-sass")(require('sass')),
     autoprefixer = require("gulp-autoprefixer"),
     clean_css = require("gulp-clean-css"),
@@ -101,8 +103,6 @@ let { src, dest} = require("gulp"),
         gulp.watch([path.watch.js], js);
     }
 
- 
-
 function fontsStyle(params) {
     let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
     if (file_content == '') {
@@ -121,11 +121,10 @@ function fontsStyle(params) {
             }
         })
     }
-
     }
 
-       function cb(params) {
-        
+    function cb(params) {
+
     }
 
     function css(params) {
@@ -173,15 +172,15 @@ function fontsStyle(params) {
         .pipe(dest(source_folder + '/fonts/'))
     })
 
-    function defaultTask(cb) {
-    cb();
-    }
+  function clean(params) {
+    return del(path.clean)
+  }
 
-  let build = gulp.series(gulp.parallel(js, fonts,css, html, images));
+  let build = gulp.series(gulp.parallel(clean, js, fonts,css, html, images));
   let watch = gulp.parallel(build, browserSync, watchFiles)
   
   exports.fonts = fonts;
-  exports.fontsStyle = fontsStyle;
+  //exports.fontsStyle = fontsStyle;
   exports.images = images;
   exports.js = js;
   exports.css = css;

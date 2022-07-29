@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Page Title</title>
 <meta charset="UTF-8">
@@ -7,11 +7,100 @@
 <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+<div class="wrapper">
+    <div class="singUp">
+        <div class="singUpText">
+              <div class="singUpText__wrapp"> 
+            <h1 class="singUpText__heading">
+              Sign up
+            </h1>
+          </div>
+        </div>
+        <div class="singUpForm">
+            <div class="formUpperText">
+                <p>New user?</p>
+                <span>Use the form below to create your account.</span>
+            </div>
+          
+            <form action="#" method="post" enctype="text/plain" class="fields">
+               
+               <div class="control a">
+                 <p class="fieldLable">First Name</p>
+                 <input class="singUpForm--fieldWidth " type="text" tabindex="1" name="firstName"  required />
+               </div>
 
-<h1>My First Heading</h1>
-<p>Gulp assembly is like cock and ball torture</p>
-<span>dsdksakdkas</span>
-<img src="img/IMG_0104.jpg">
+               <div class="control b">
+                 <p class="fieldLable">Last Name</p>
+                 <input class="singUpForm--fieldWidth " type="text" tabindex="2" name="lastName" required />
+               </div>
+
+               <div class="control c">
+                 <p class="fieldLable">Nationality</p>
+                 <select class="singUpForm--fieldWidth " name="Nationality"> 
+                 <option value="value1" selected>American</option>
+                 <option value="value2">Belarusian</option>
+               </select>
+               </div>
+
+               <div class="control d">
+                 <p class="fieldLable">E-mail</p>
+                 <input
+                   class="singUpForm--fieldWidth "
+                   type="email"
+                   name="E-mail"
+                   required
+                 />
+               </div>
+       
+               <div class="control f">
+                 <fieldset class="fieldSet">
+                     <legend class=" fieldSet__lable">Date of Birth</legend>
+                 <select name="day" class="fieldSet__day "> 
+                     <option value="10" selected>10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                     <option value="13">13</option>
+               </select>
+               <select name="month" class="fieldSet__month"> 
+                     <option value="1" selected>December</option>
+                     <option value="2">Feb</option>
+                     <option value="3">Mar</option>
+                     <option value="4">Apr</option>
+               </select>
+               <select name="year" class="fieldSet__year"> 
+                     <option value="1923"  selected >1923</option>
+                     <option value="1924">1924</option>
+                     <option value="1925">1925</option>
+                     <option value="1926">1926</option>
+               </select>
+             </fieldset> 
+               </div>
+
+               <div class="control genderControl g">
+                 <p class="fieldLable ">Gender</p>
+                 <div><input value="male" type="radio" name="gender" checked /> Male</div>
+                 <div><input  value="female" type="radio" name="gender" /> Female</div>
+               </div>
+
+               <div class="control e" >
+                 <p class="fieldLable passLable">Password</p>
+                 <input class="singUpForm--fieldWidth" type="password" tabindex="5" name="password"  required />
+               </div>
+
+               <div class="control v">
+                 <p class="fieldLable confirmLable">Confirm Password</p>
+                 <input class="singUpForm--fieldWidth" type="password" tabindex="1" name="confPass"  required />
+               </div>
+               <div class="bottomText n">
+                <span>Have an account?</span><a href="#"> Login</a>
+           </div>
+               <div class="h submit__btn">
+                <input type="submit" value="Complete Signup" class="singUpForm__submitBtn" />
+               </div >  
+       </form>
+        </div>
+    </div>
+</div>
 <script src="js/script.min.js"></script>
 </body>
 </html>
