@@ -1,0 +1,31 @@
+.singUp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 665px;
+    height: 480px;
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+}
+
+.singUpText {
+    min-width: 137.2px;
+    background: #5A61ED;
+}
+
+.singUpText__heading {
+        font-family: 'PTS55F';
+        position: absolute;
+        top: 296px;
+        left: 68.5px;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 49px;
+        line-height: 63px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+}

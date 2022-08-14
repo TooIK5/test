@@ -1,0 +1,90 @@
+//   .a { 
+//     opacity: 0;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .b {
+//     opacity: 0;
+//     animation-delay: .5s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .c {
+//     opacity: 0;
+//     animation-delay: 1s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .d {
+//     opacity: 0;
+//     animation-delay: 1.5s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .f { 
+//     opacity: 0;
+//     animation-delay: 2s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .g {
+//     opacity: 0;
+//     animation-delay: 2.5s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .e {
+//     opacity: 0;
+//     animation-delay: 3s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+
+// .v {
+//     opacity: 0;
+//     animation-delay: 3.5s !important;
+//     animation: opacity .5s linear alternate;
+//     animation-fill-mode: forwards;
+// }
+ 
+// @keyframes dash {
+//     from {
+//         stroke-dashoffset: 2020;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+//   }
+
+//   @keyframes opacity {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+//   }
+  
+//   @keyframes vibro {
+//     0% {
+//         transform: translateX(-3px);
+//     }
+//     25% {
+//         transform: translateX(3px);
+//     }
+//     50% {
+//         transform: translateX(-3px);
+//     }
+//     75% {
+//         transform: translateX(3px);
+//     }
+//     100% {
+//         transform: translateX(0);
+//     }
+//   }

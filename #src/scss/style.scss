@@ -14,7 +14,9 @@ fieldset {
     padding: 0;
   }
 
-  h1, h2, h3, h4, h5, h6, p { margin: 0; }
+  h1, h2, h3, h4, h5, h6, p { margin: 0;
+    padding: 0;
+  }
 
   input, legend {
     padding: 0;
@@ -33,7 +35,9 @@ fieldset {
  
 // Modules
 @import "./modules/form.scss";
-@import "./fonts.scss";
+@import "./modules/leftBlock.scss";
+@import "./modules/keyframes.scss";
+@import "./modules/fonts.scss";
 
 .wrapper {
   width: 100%;

@@ -19,6 +19,7 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
 }
 
 input,
@@ -113,17 +114,56 @@ legend {
   width: 100%;
 }
 
-.formUpperText p {
+.singUpForm__svg {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+.singUpForm__path {
+  stroke-dasharray: 2020;
+  -webkit-animation: dash 2.5s linear alternate;
+          animation: dash 2.5s linear alternate;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 2020;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2020;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.formUpperText h2 {
   font-family: "WorkSans-Medium";
   font-size: 22px;
   line-height: 26px;
+  font-weight: 100;
   letter-spacing: -0.6px;
 }
 
-.formUpperText span {
+.formUpperText div {
+  margin-top: -1.5px;
+  padding-bottom: 1.5px;
+}
+
+.formUpperText div span {
   font-family: "WorkSans-Light";
   font-size: 14px;
-  line-height: 16px;
+  line-height: 0;
   letter-spacing: -0.15px;
 }
 
@@ -133,6 +173,12 @@ legend {
   font-family: "WorkSans-Medium";
   font-size: 14px;
   line-height: 16px;
+}
+
+.control input[type=text],
+.control input[type=email],
+.control input[type=password] {
+  background: transparent;
 }
 
 input[type=radio] {
@@ -172,7 +218,7 @@ input[type=radio] {
       -ms-flex-align: start;
           align-items: start;
   margin-top: 17px;
-  grid-template-areas: "a b" "c d" "f g" "e v" "n  h";
+  grid-template-areas: "a b" "c d" "f g" "e v" "n h";
 }
 
 .fields input,
@@ -300,6 +346,10 @@ select {
   font-size: 13px;
   line-height: 15px;
   padding-top: 88.12px;
+}
+
+.confirmLable {
+  letter-spacing: -0.2px;
 }
 
 .submit__btn {
