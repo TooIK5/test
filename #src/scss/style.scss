@@ -1,38 +1,46 @@
-
 //style reset
 
 fieldset {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
-  }
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
 
-  body {
-    margin: 0;
-    background: #F2F2F2;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  background: #F2F2F2;
+  padding: 0;
+}
 
-  h1, h2, h3, h4, h5, h6, p { margin: 0;
-    padding: 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
 
-  input, legend {
-    padding: 0;
-  }
-  
-  @mixin font($font_name, $file_name, $weight, $style) {
+input,
+legend {
+  padding: 0;
+}
 
-    @font-face {
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+    url("../fonts/#{$file_name}.woff2") format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};
-       }
-    }
- 
+  }
+}
+
 // Modules
 @import "./modules/form.scss";
 @import "./modules/leftBlock.scss";
@@ -42,4 +50,191 @@ fieldset {
 .wrapper {
   width: 100%;
   height: 100%;
+}
+
+//media queries
+
+@media (max-width: 767px) {
+
+  .signUpText__heading {
+    font-size: 44px;
+    position: relative;
+    top: auto;
+    bottom: 22px;
+    left: auto;
+  }
+
+  .wrapper {
+    .bottomText {
+      position: absolute;
+      left: 20.5vw;
+    }
+
+    .singUpText {
+      min-width: 17.886vw;
+    }
+
+    .singUpText__wrapp {
+      position: relative;
+      margin-top: 330px;
+      float: right;
+    }
+
+    .singUp {
+      width: 84.635vw;
+
+      .singUpForm--fieldWidth {
+        width: 29vw;
+      }
+
+      .firstnameField,
+      .genderControl,
+      .lastNameField,
+      .inputEmail,
+      .nationalityField {
+        font-size: 12px;
+      }
+
+      .fieldSet {
+        width: auto;
+        display: flex;
+      }
+
+      .fieldSet__day {
+        font-size: 12px;
+        min-width: 20px;
+        flex: .5;
+      }
+
+      .fieldSet__month {
+        font-size: 12px;
+        margin: 0 0 0 0;
+        flex: 1;
+        min-width: 70px;
+        margin: 0 10px 0 10px;
+      }
+
+      .fieldSet__year {
+        font-size: 12px;
+        flex: .5;
+        min-width: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .singUp {
+    .submitBtn {
+      position: absolute;
+      right: 10px;
+      bottom: 33px;
+    }
+
+    .bottomText {
+      font-size: 12px;
+    }
+
+    .singUpFormBlock {
+      padding: 39px 10px 0 10px;
+    }
+
+    .fields {
+      .singUpForm--fieldWidth {
+        width: 30vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+
+    .singUp {
+      width: 100%;
+      position: relative;
+      left: initial;
+      top: initial;
+      transform: translate(0);
+      min-width: none;
+      height: 100vh;
+      min-height: 720px;
+      max-height: 100vh;
+
+      .firstnameField,
+      .genderControl,
+      .lastNameField,
+      .inputEmail,
+      .nationalityField,
+      .fieldSet__day,
+      .fieldSet__month,
+      .fieldSet__year {
+        font-size: 14px;
+      }
+      .bottomText {
+        position: absolute !important;
+        margin-top: 180px !important;
+        font-size: 14px;
+      }
+      .singUpText {
+        .singUpText__wrapp {
+          top: auto;
+          left: auto;
+          margin: 560px 0 0 0;
+
+          .signUpText__heading {
+            font-size: 36px;
+          }
+        }
+      }
+
+      .formUpperText {
+        .subHeadingBlock {
+          height: 18px;
+          font-size: 3vw;
+        }
+      }
+
+      .singUpFormBlock {
+        width: 100%;
+
+        .fields {
+          width: 100%;
+          justify-content: left;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "f"
+            "g"
+            "e"
+            "v"
+            "n"
+            "h";
+
+          .singUpForm--fieldWidth {
+            width: 100%;
+          }
+        }
+
+        .singUpForm__svg {
+          top: 300px;
+        }
+
+        .submitBtn {
+          position: relative;
+          top: auto;
+          left: auto;
+          width: 100%;
+          margin: 100px 0 0 10px;
+
+          .singUpForm__submitBtn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -5,8 +5,19 @@
 // Minimum eight in length .{8,} (with the anchors)
 
 let nameValid = (value) => {
-    fieldsState["firstName"].isValid =  value != '';
-    toggleClass([firstnameField, firstnameField__redLabel], value != '');
+    let pattern = /(?=.*?[#?!@$%^&*-=+/"'|])/;
+    let isMatch = value.match(pattern);
+    let flag = value != '' && !isMatch;
+    fieldsState["firstName"].isValid = flag;
+    toggleClass([firstnameField, firstnameField__redLabel], flag);
+}
+
+let lastNameValid = (value) => {
+    let pattern = /(?=.*?[#?!@$%^&*-=+/"'|])/;
+    let isMatch = value.match(pattern);
+    let flag = value != '' && !isMatch;
+    fieldsState["lastName"].isValid = flag;
+    toggleClass([lastNameField, lastnameField__redLabel], flag);
 }
 
 let mailValid = (value) => {
@@ -14,12 +25,6 @@ let mailValid = (value) => {
     let isMatch = value.match(pattern);
      fieldsState["E-mail"].isValid = !!isMatch;
     toggleClass([emailField, inputEmail__redLabel], !!isMatch);
-}
-
-let lastNameValid = (value) => {
-         fieldsState["lastName"].isValid = value != '';
-         console.log("lastNameValid: ", value);
-        toggleClass([lastNameField, lastnameField__redLabel], value != '');
 }
 
 let passValid = (value) => {
@@ -31,9 +36,9 @@ let passValid = (value) => {
         toggleClass([passField, passField__redLabel], !!isMatch);
 }
 
-let passConfirm = (value) => {
+let passConfirm = () => {
         toggleClass([confirmPassField, confirmPassField__redLabel], compirePasswords()); 
-        compirePasswords() ? fieldsState["confPass"].isValid = true : fieldsState["confPass"].isValid = false; 
+        fieldsState["confPass"].isValid = compirePasswords(); 
 }
 
 let compirePasswords = () => {

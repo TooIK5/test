@@ -1,6 +1,6 @@
 @@include('./modules/webptest.js');
 @@include('./modules/validators.js');
-@@include('./modules/dal.js');
+@@include('./modules/dataReq.js');
 
 let firstnameField = document.querySelector(".firstnameField");
 let lastNameField = document.querySelector(".lastNameField");
@@ -50,10 +50,13 @@ fields.addEventListener("input", e => {
 
 fields.addEventListener("submit", e => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+
     if (!isFieldsValid()) {
        toggleSmbBtnClass();
      } else {
-        sentRequest();
+        sentRequest(formProps);
         hideNode(singUpForm__submitBtn);
         hideNode(fields);
         hideNode(formUpperText__subHeading);

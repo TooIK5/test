@@ -1,21 +1,10 @@
-.singUp {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 665px;
-    height: 480px;
-    display: flex;
-    flex-direction: row;
-    background: #FFFFFF;
-}
 
 .singUpText {
     min-width: 137.2px;
     background: #5A61ED;
 }
 
-.singUpText__heading {
+.signUpText__heading {
         font-family: 'PTS55F';
         position: absolute;
         top: 296px;

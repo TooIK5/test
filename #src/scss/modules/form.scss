@@ -1,6 +1,19 @@
 
 //form block 
-.singUpForm {
+
+.singUp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 665px;
+    height: 480px;
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+}
+
+.singUpFormBlock {
     position: relative;
     padding: 39px 22.5px 0 20.8px;
     width: 100%;
@@ -38,24 +51,25 @@
 }
 
 .formUpperText {
-        div {
+    .subHeadingBlock {
           margin-top: -1.5px;
           padding-bottom: 1.5px;
         }
     }
 
 .control {
-    select, input[type="text"], .inputEmail  {
+    .fieldSet__day, .fieldSet__month, .fieldSet__year,
+    .firstnameField, .lastNameField, .inputEmail, .nationalityField  {
         font-family: "WorkSans-Medium";
         font-size: 14px;
         line-height: 16px;
     }
-    input[type="text"], .inputEmail, .passField {
+    .firstnameField, .lastNameField, .inputEmail, .confirmPassField, .passField {
         background: transparent;
     }
 }
 
-input[type="radio"]{
+.genderControl__radio {
     vertical-align: bottom;
     margin: 0 0 0 -1px;
     cursor: pointer;
@@ -210,7 +224,7 @@ input[type="radio"]{
     letter-spacing: -.2px;
 }
 
-.submit__btn {
+.submitBtn {
     position: absolute;
     right: 22px;
     bottom: 33px;
@@ -252,102 +266,3 @@ input[type="radio"]{
     padding-bottom: 6.1px;
     }
 
-@media (max-width: 767px) {
-   
-    .wrapper {
-        .fields {
-            
-        }
-
-        .bottomText {
-            position: absolute;
-            left: 20vw;
-            
-        }
-
-        .singUpForm {
-         
-        }
-        .singUpText {
-            min-width:  17.886vw;
-            .singUpText__wrapp {
-                position: relative;
-                margin-top: 330px;
-                float: right;
-            }
-            .singUpText__heading {
-                font-size: 44px;
-                position: relative;
-                top: auto;
-                bottom: 22px;
-                left: auto;
-            }      
-        }
-
-        .singUp {
-            width: 84.635vw;
-            .singUpForm--fieldWidth {
-                width: 29vw;
-                }
-          
-              .firstnameField, .genderControl, .lastNameField, .inputEmail, .nationalityField {
-                font-size: 12px;
-              }
-           
-              .fieldSet {
-                width: auto;
-              }
-              
-              .fieldSet__day {
-                min-width: 25px;
-                font-size: 12px;
-              }
-              .fieldSet__month {
-                margin: 0 0 0 0;
-                 min-width: 75px;
-                 font-size: 12px;
-              }
-              .fieldSet__year {
-                 min-width: 40px;
-                 font-size: 12px;
-              }
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .singUp {
-        .submit__btn {
-            position: absolute;
-            right: 10px;
-            bottom: 33px;
-        }
-        
-        .bottomText {
-        font-size: 12px;
-            
-        }
-        .singUpText {
-            .signUpText-wrapp {
-                .singUpText__heading {
-                    font-size: 32px;
-                   
-                }   
-            }
-        }
-  .singUpForm {
-    padding: 39px 10px 0 10px;
-  }
-  
-        .fields {
-            .singUpForm--fieldWidth {
-                width: 30vw;
-                } 
-        }
-    }
-}
-
-
-@media (max-width: 480px) {
-
-}

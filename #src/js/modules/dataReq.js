@@ -6,9 +6,7 @@ async function sentRequest(data) {
       'Content-Type': 'application/json'
     }
   }).then((response) => {
-    if (response.ok) {
       return response.json();
-    }
   })
     .catch(() => {
       getError();
