@@ -149,16 +149,27 @@ legend {
 
 @media (max-width: 480px) {
   .wrapper {
-
+    .singUp {
+      display: flex;
+      flex-direction: column;
+    }
+    .singUpForm__submitBtn {
+      font-size: 18px;
+      height: 40px;
+    }
+    .subHeadingBlock {
+      margin-top: 5px;
+      line-height: 15px;
+    }
     .singUp {
       width: 100%;
       position: relative;
       left: initial;
       top: initial;
       transform: translate(0);
-      min-width: none;
+      min-width: auto;
       height: 100vh;
-      min-height: 720px;
+      min-height: 783px;
       max-height: 100vh;
 
       .firstnameField,
@@ -173,22 +184,31 @@ legend {
       }
       .bottomText {
         position: absolute !important;
-        margin-top: 180px !important;
+        top: 650px;
         font-size: 14px;
+        left: 10px;
       }
       .singUpText {
+        max-height: 100px;
+        display: flex;
+        justify-content: center;
+    
         .singUpText__wrapp {
-          top: auto;
-          left: auto;
-          margin: 560px 0 0 0;
-
+          margin: 0 0 0 0;
+         
+          float: none;
           .signUpText__heading {
-            font-size: 36px;
+            font-size: 42px;
+            top: 0;
+            bottom: 0;
+            transform: rotate(0);
+            writing-mode: horizontal-tb;
           }
         }
       }
 
       .formUpperText {
+    
         .subHeadingBlock {
           height: 18px;
           font-size: 3vw;
@@ -196,8 +216,8 @@ legend {
       }
 
       .singUpFormBlock {
-        width: 100%;
-
+        width: calc(100% - 20px);
+      
         .fields {
           width: 100%;
           justify-content: left;
