@@ -34,25 +34,25 @@
             </div>
             <form class="fields" autocomplete="off" novalidate>
                 
-               <label class="control a">
-                 <p class="fieldLable">First Name</p>
-                 <input class="singUpForm--fieldWidth firstnameField" type="text"  name="firstName"   />
+               <div class="control a">
+                 <p  class="fieldLable">First Name</p>
+                 <input id="username" nameclass="singUpForm--fieldWidth firstnameField" type="text" name="firstName"/>
                  <p class="firstnameField__redLabel ">Incorrect first name</p>
-               </label>
+               </div>
 
-               <label class="control b">
+               <div class="control b">
                  <p class="fieldLable">Last Name</p>
                  <input class="singUpForm--fieldWidth lastNameField" type="text"  name="lastName"  />
                  <p class="lastnameField__redLabel">Incorrect last name</p>
-               </label>
+               </div>
 
-               <label class="control c">
+               <div class="control c">
                  <p class="fieldLable">Nationality</p>
                  <select class="singUpForm--fieldWidth nationalityField" name="Nationality"> 
                  <option value="value1" selected>American</option>
                  <option value="value2">Belarusian</option>
                </select>
-               </label>
+               </div>
 
                <div class="control d">
                  <p class="fieldLable">E-mail</p>
@@ -66,9 +66,9 @@
                  <p class="inputEmail__redLabel ">Unavailible E-mail</p>
                </div>
        
-               <label class="control f">
+               <div class="control f">
                  <fieldset class="fieldSet">
-                     <legend class=" fieldSet__lable">Date of Birth</legend>
+                 <legend class=" fieldSet__lable">Date of Birth</legend>
                  <select name="day" class="fieldSet__day "> 
                      <option value="10" selected>10</option>
                      <option value="11">11</option>
@@ -88,25 +88,25 @@
                      <option value="1926">1926</option>
                </select>
                </fieldset> 
-               </label>
+               </div>
 
-               <label class="control genderControl g">
+               <div class="control genderControl g">
                  <p class="fieldLable ">Gender</p>
-                 <div><input  class="genderControl__radio" value="male" type="radio" name="gender" checked /> Male</div>
-                 <div><input  class="genderControl__radio" value="female" type="radio" name="gender" /> Female</div>
-               </label>
+                 <label><input  class="genderControl__radio" value="male" type="radio" name="gender" checked /> Male</label>
+                 <label><input  class="genderControl__radio" value="female" type="radio" name="gender" /> Female</label>
+               </div>
 
-               <label class="control e" >
+               <div class="control e" >
                  <p class="fieldLable passLable">Password</p>
                  <input class="singUpForm--fieldWidth passField" type="password" tabindex="5" name="password"  required />
                  <p class="passField__redLabel ">Unavailible password</p>
-                </label>
+                </div>
 
-               <label class="control v">
+               <div class="control v">
                  <p class="fieldLable confirmLable">Confirm Password</p>
                  <input class="singUpForm--fieldWidth confirmPassField" type="password" tabindex="1" name="confPass"  required />
                  <p class="confirmPassField__redLabel">Password not match</p>
-                </label>
+                </div>
                 <div class="submitBtn">
                   <input type="submit" value="Complete Signup" class="singUpForm__submitBtn" />
                  </div>  
@@ -118,8 +118,8 @@
        </div>    
     </main>
 </div>
-<script src="js/script.min.js"></script>
-<script type="text/json" src="./js/server-ok.json"></script>
-<script type="text/json" src="./js/server-error.json"></script>
+<script  src="js/script.min.js"></script>
+<script  src="./js/server-ok.json"></script>
+<script  src="./js/server-error.json"></script>
 </body>
 </html>

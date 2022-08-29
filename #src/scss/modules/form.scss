@@ -137,7 +137,6 @@
         font-family: 'WorkSans-Light';
         font-size: 12px;
         line-height: 14px;
-        color: #7C7C7C;
         color: red;
         display: none;
         height: 0;
@@ -185,10 +184,11 @@
     font-family: "WorkSans-Medium";
     font-size: 14px;
     line-height: 16px;
-    div + div {
+    label + label {
         margin-left: 15.7px;
     }
-  div {
+
+  label {
     display: inline-block;
   }
  }
@@ -258,7 +258,6 @@
     line-height: 0;
     letter-spacing: -0.1px;
     margin-top: 17px;
-    height: auto;
 }
 
 .singUpForm--fieldWidth {
